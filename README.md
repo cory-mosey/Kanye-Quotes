@@ -12,6 +12,6 @@
 
 | Endpoint | Description | Request Headers |
 | -------- | ------- | ------- |
-| `/api/generate-token` | Generate a short-lived token in order to authenticate into the API. | - Accept: `application/json` | 
-| `/api/quotes` | Display a list of Kayne West quotes. | - Accept: `application/json` - Authorization: `Bearer {token}` |
+| `/api/generate-token` | Generate a short-lived token in order to authenticate into the API. | Accept: `application/json` | 
+| `/api/quotes` | Display a list of Kayne West quotes. | Accept: `application/json`<br />Authorization: `Bearer {token}` |
 
