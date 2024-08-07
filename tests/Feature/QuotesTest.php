@@ -9,7 +9,7 @@ class QuotesTest extends TestCase
 {
     public function test_unauthenticated_quotes_endpoint_response(): void
     {
-        $response = $this->get('/api/quotes');
+        $response = $this->get('/v1/quotes');
 
         $response->assertStatus(401);
     }
@@ -20,7 +20,7 @@ class QuotesTest extends TestCase
         
         $response = $this->withHeaders([
             'Authorization' => "Bearer {$token}"
-        ])->get('/api/quotes');
+        ])->get('/v1/quotes');
 
         $response->assertStatus(200);
     }
@@ -31,13 +31,13 @@ class QuotesTest extends TestCase
 
         $standardResponse = $this->withHeaders([
             'Authorization' => "Bearer {$token}"
-        ])->get('/api/quotes');
+        ])->get('/v1/quotes');
 
         $this->assertCount(5, $standardResponse['quotes']);
 
         $limitResponse = $this->withHeaders([
             'Authorization' => "Bearer {$token}"
-        ])->get('/api/quotes?limit=8');
+        ])->get('/v1/quotes?limit=8');
 
         $this->assertCount(8, $limitResponse['quotes']);
     }
