@@ -10,9 +10,9 @@
 6. Change `SESSION_DRIVER` to `file`.
 7. Change `QUEUE_CONNECTION` to `sync`.
 8. Change `CACHE_STORE` to `file` or `redis`.
-6. Run `php artisan key:generate` in the directory.
-6. Once completed, run `php artisan serve` to access the API through your localhost or use another service such as Apache.
-7. You can now access the API by the defined domain.
+9. Run `php artisan key:generate` in the directory.
+10. Once completed, run `php artisan serve` to access the API through your localhost or use another service such as Apache.
+11. You can now access the API by the defined domain.
 
 ## Endpoints
 
