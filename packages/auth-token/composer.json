@@ -1,0 +1,38 @@
+{
+    "name": "avrillo-code-test/auth-token",
+    "description": "A Laravel package for the Avrillo code test to create authentication tokens for the API.",
+    "type": "library",
+    "license": "proprietary",
+    "authors": [
+        {
+            "name": "Cory Mosey",
+            "email": "cory@vanquish.app"
+        }
+    ],
+    "require": {
+        "php": "^8.1"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^10.0|^11.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "AvrilloCodeTest\\AuthToken\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "AvrilloCodeTest\\AuthToken\\Tests\\": "tests/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "AvrilloCodeTest\\AuthToken\\Providers\\AuthTokenServiceProvider"
+            ],
+            "aliases": {
+            }
+        }
+    },
+    "minimum-stability": "dev"
+}

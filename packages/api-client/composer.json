@@ -1,0 +1,38 @@
+{
+    "name": "avrillo-code-test/api-client",
+    "description": "A Laravel package for the Avrillo code test to act as a client for API requests.",
+    "type": "library",
+    "license": "proprietary",
+    "authors": [
+        {
+            "name": "Cory Mosey",
+            "email": "cory@vanquish.app"
+        }
+    ],
+    "require": {
+        "php": "^8.1"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^10.0|^11.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "AvrilloCodeTest\\ApiClient\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "AvrilloCodeTest\\ApiClient\\Tests\\": "tests/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "AvrilloCodeTest\\ApiClient\\Providers\\ApiClientServiceProvider"
+            ],
+            "aliases": {
+            }
+        }
+    },
+    "minimum-stability": "dev"
+}
