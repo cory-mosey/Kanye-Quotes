@@ -13,7 +13,7 @@ class Token
      * 
      * @return string
      */
-    public function create(): string
+    public static function create(): string
     {
         Cache::put(
             config('auth-token.name', 'auth-token'),
@@ -21,7 +21,7 @@ class Token
             config('auth-token.expiry', 600)
         );
 
-        return $this->get();
+        return self::get();
     }
 
     /**
@@ -29,7 +29,7 @@ class Token
      * 
      * @return string
      */
-    public function get(): ?string
+    public static function get(): ?string
     {
         return Cache::get(
             config('auth-token.name', 'auth-token'),
@@ -43,8 +43,8 @@ class Token
      * @param string $bearer
      * @return bool
      */
-    public function check(string $bearer): bool
+    public static function check(string $bearer): bool
     {
-        return $bearer === $this->get();
+        return $bearer === self::get();
     }
 }

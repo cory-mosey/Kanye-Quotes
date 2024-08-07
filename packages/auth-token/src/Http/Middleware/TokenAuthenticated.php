@@ -18,7 +18,7 @@ class TokenAuthenticated
      */
     public function handle(Request $request, Closure $next): Response
     {
-        if($request->bearerToken() === null || (new Token)->check($request->bearerToken()) === false) {
+        if($request->bearerToken() === null || Token::check($request->bearerToken()) === false) {
             return response()->json('Unauthenticated.', 401);
         }
         return $next($request);

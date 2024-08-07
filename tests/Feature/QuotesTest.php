@@ -16,7 +16,7 @@ class QuotesTest extends TestCase
 
     public function test_authenticated_quotes_endpoint_response(): void
     {
-        $token = (new Token)->create();
+        $token = Token::create();
         
         $response = $this->withHeaders([
             'Authorization' => "Bearer {$token}"
@@ -27,7 +27,7 @@ class QuotesTest extends TestCase
 
     public function test_authenticated_quotes_endpoint_response_array_total(): void
     {
-        $token = (new Token)->create();
+        $token = Token::create();
 
         $standardResponse = $this->withHeaders([
             'Authorization' => "Bearer {$token}"

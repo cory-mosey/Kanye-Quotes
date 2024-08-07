@@ -25,7 +25,7 @@ class TokenTest extends TestCase
     {
         $response = $this->get('/v1/generate-token');
 
-        $response->assertJson(['token' => (new Token)->get()]);
+        $response->assertJson(['token' => Token::get()]);
     }
 
     public function test_token_endpoint_returns_unsuccessful_response(): void

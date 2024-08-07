@@ -14,7 +14,7 @@ class GenerateToken
      */
     public function __invoke(): JsonResponse
     {
-        $token = (new Token)->create();
+        $token = Token::create();
 
         return response()->json(['token' => $token], 200);
     }
